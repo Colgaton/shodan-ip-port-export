@@ -25,11 +25,12 @@ def main(argv):
 
 
     try:
-        opts, args = getopt.getopt(argv, "hi:o:df:pt:", ["ifile=", "ofile="])
+        opts, args = getopt.getopt(argv, "hi:o:d:f:pt:", ["ifile=", "ofile="])
     except getopt.GetoptError:
         help()
 
     for opt, arg in opts:
+        print (opt, arg)
         if opt == '-h':
             help()
         elif opt in ("-i", "--ifile"):
@@ -50,6 +51,7 @@ def main(argv):
     #print('Format is', fformat)
 
     if not inputf:
+            print ('not1')
             help()
 
     if not printout:
@@ -57,9 +59,11 @@ def main(argv):
             help()
 
     if not fformat:
+            print ('not2')
             help()
 
     if not token:
+            print ('not3')
             help()
 
     try:
@@ -109,7 +113,7 @@ def main(argv):
             print("Error:", e, hostIP)
 
         if delay:
-            time.sleep(delay)
+            time.sleep(int(delay))
 
     if not printout:
         fout.close()

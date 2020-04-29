@@ -30,7 +30,7 @@ def main(argv):
         help()
 
     for opt, arg in opts:
-        print (opt, arg)
+        #print (opt, arg)
         if opt == '-h':
             help()
         elif opt in ("-i", "--ifile"):
@@ -51,7 +51,6 @@ def main(argv):
     #print('Format is', fformat)
 
     if not inputf:
-            print ('not1')
             help()
 
     if not printout:
@@ -59,11 +58,9 @@ def main(argv):
             help()
 
     if not fformat:
-            print ('not2')
             help()
 
     if not token:
-            print ('not3')
             help()
 
     try:
